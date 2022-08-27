@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Poppins:wght@400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+html 
+{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body 
+{
+    padding:1rem;
+
+
+}
+
+
+li 
+{
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: ubuntu;
+}
+
+a:hover 
+{
+    text-decoration: underline;
+}
+
+
+
+
+
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticy;
+    position: fixed;
+    width: 98vw;
+    z-index: 5;
+
+}
+
+
+.MainHeading 
+{
+    font-weight: 700;
+}
+
+
+p 
+{
+    font-weight: 500;
+
+}
+
+
+.mainContent
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-type: y proximity;
+    overflow: scroll;
+    height: 100%;
+}
+
+.Issue
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    padding: 10rem;
+    scroll-snap-align: center;
+}
+
+
+.Issue img 
+{
+    width: 420px;
+    transition: all .5s ease-in-out;
+    transform: rotate(-15deg);
+}
+
+img:hover 
+{
+    transform: rotate(15deg);
+}
+
+
+
+
+.leftDivBox
+{
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    
+}
+
+.copyrights 
+{
+
+    font-size: .85rem;
+}
+
+.privacy 
+{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+
+.rightContent
+{
+    position: fixed;
+    bottom: 20px;
+    right: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.attribute
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+i 
+{
+    font-size: 1.25rem;
+    margin-right: .5rem;
+}
+
+/* meadi queries */
+
+@media screen and (max-width:768px) {
+    .navbar,.leftDivBox,.rightContent,.mainContent,.privacy
+    {
+        position: static;
+    }
+    .navbar
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .MainHeading
+    {
+        font-size: 1.5rem;
+    }
+
+    a 
+    {
+        font-weight: 500;
+    }
+    .Issue
+    {
+        padding: 3rem;
+    }
+    .Issue img 
+    {
+        width: 300px;
+        transform: none;
+        transition: none;
+    }
+    h3 
+    {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    p 
+    {
+        font-size: 1rem;
+    }
+    .leftDivBox,.privacy,.rightContent
+    {
+        text-align: center;
+        margin: 1.25rem;
+    }
+}
+
+@media screen and (min-width:769px)  and (max-width:1024px){
+   
+
+    .leftDivBox p
+    {
+        font-size: .8rem;
+    }
+    a 
+    {
+        font-size: .9rem;
+    }
+}
